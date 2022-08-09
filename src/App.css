@@ -1,38 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+body {
+  margin:0
+}
+
 .App {
-  text-align: center;
+  font-family: Poppins;
+  text-align:center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.hero-section {
   color: white;
+  background-color: black;
+  height: 400px;
+  background-image: url("https://assets.codepen.io/6060109/agency-hero-image.png");
+  background-size: cover;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav > p {
+  padding: 30px 15px; 
 }
+
+.hero-section h1 {
+  font-size: 25px;
+  margin: auto;
+  transform: translateY(150%);
+}
+
+.service-section {
+  margin-bottom: 100px;
+}
+
+.service-section h1 {
+  font-size: 25px;
+  margin-top: 80px;
+  font-weight: bold;
+  color: #133588;
+}
+
+.service-items{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  margin: 20px 30px 5px 30px;
+}
+
+.service-item p {
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+  color: #806c6c;
+  margin-top: 0;
+  padding-left: 30px;
+}
+
+.service-item img {
+  width: 80%;
+  text-align: left;
+}
+
+.footer-section {
+  background-color: #133588;
+  color: white;
+  height: 400px;
+  position: relative;
+}
+
+.footer-description {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%); 
+}
+
+.footer-description h1 {
+  font-size: 25px;
+}
+
+.footer-description input {
+  background: none;
+  border:none;
+  border-bottom: 1px solid white;
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  color:white;
+}
+
+.footer-description button {
+  width: 110px;
+  height: 35px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #806c6c;
+}
+
+input[type='text']::placeholder {
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .hero-section h1 {
+    font-size: 40px;
+  }
+
+  .service-items{
+    display: flex;
+    justify-content: center;
+  } 
+
+  .service-section h1 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .service-item p {
+    font-size: 20px;
+    padding-left: 0;
+  }
+
+  .service-item img {
+    width: 100%;
+  }
+
+  .footer-description {
+    width: 25%;
+  }
+  
+  .footer-description h1 {
+    font-size: 40px;
+  }
+  
+  .footer-description input {
+    width: 80%;
+  }
+  
+  .footer-description {
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+  }
+  
+  .footer-description h1 {
+    font-size: 40px;
+  }
+  
+  .footer-description button {
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #806c6c;
+  }
+  
+  input[type='text']::placeholder {
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
+
+
