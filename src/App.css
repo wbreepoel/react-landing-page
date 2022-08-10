@@ -116,6 +116,30 @@ input[type='text']::placeholder {
   font-size: 14px;
 }
 
+.counter-field {
+  margin-bottom: 40px;
+}
+
+.counter-field button {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+.day-field {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin:auto;
+}
+
+.day-box {
+  width: 90%;
+  border: 1px solid black;
+  margin: 10px 0
+}
+
+
 @media only screen and (min-width: 992px) {
 
   .hero-section h1 {
