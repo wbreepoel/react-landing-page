@@ -1,9 +1,10 @@
 import React from 'react' 
 
-function CounterSection (props) {
+function CounterSection () {
     const days = ['MO','TU','WE','TH','FR','SA','SU']
     const [selectedDay, setSelectedDay] = React.useState('MO')
     const [allCounter, setAllCounters] = React.useState({})
+    let [totalWorkouts, setTotalWorkouts] = React.useState(0)
      
     function addCounter() {
         const newAllCounter = {...allCounter}
@@ -12,6 +13,20 @@ function CounterSection (props) {
             newAllCounter[selectedDay] = currentDayCounter + '🏆'
         } else {
             newAllCounter[selectedDay] = '🏆'
+        }
+        setTotalWorkouts(totalWorkouts += 1)
+        setAllCounters(newAllCounter)
+    }
+
+    function subtractCounter() {
+        const newAllCounter = {...allCounter}
+        const currentDayCounter = newAllCounter[selectedDay]
+        if(currentDayCounter) {
+            newAllCounter[selectedDay] = currentDayCounter.slice(0,-2)
+            setTotalWorkouts(totalWorkouts - 1)
+        } else {
+            newAllCounter[selectedDay] = ''
+
         }
 
         setAllCounters(newAllCounter)
@@ -36,8 +51,8 @@ function CounterSection (props) {
                 })
                 
                 }
-                <p>{props.count <= 0 ? 'No workouts yet' : props.count}</p>
-                <button>-</button>
+                <p>Total Workouts Done: {totalWorkouts}</p>
+                <button onClick={subtractCounter}>-</button>
                 <button onClick={addCounter}>+</button>
             </div>
         </div>

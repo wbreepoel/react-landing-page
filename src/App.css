@@ -133,10 +133,17 @@ input[type='text']::placeholder {
   margin:auto;
 }
 
+.day-field h3 {
+  margin-right: 0px;
+}
+
 .day-box {
   width: 90%;
   border: 1px solid black;
-  margin: 10px 0
+  margin: 10px 0;
+  padding: 8px;
+  box-sizing: border-box;
+  text-align:left;
 }
 
 
@@ -202,6 +209,10 @@ input[type='text']::placeholder {
     color: rgba(255,255,255,0.8);
     text-align: center;
     font-size: 16px;
+  }
+
+  .day-field {
+    width: 50%;
   }
 
 }

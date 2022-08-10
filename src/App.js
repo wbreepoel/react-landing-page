@@ -7,7 +7,6 @@ import CounterSection from './CounterSection';
 
 function App() {
 
-  const [count, setCounter] = React.useState(0)
   
 
   return (
@@ -15,8 +14,7 @@ function App() {
       <HeroSection/>
       <ServiceSection/>
       <FooterSection />
-      <CounterSection onClickPlus={()=> setCounter(count+1)} 
-        onClickMin={()=> setCounter(count-1)} count={count} />    
+      <CounterSection/>    
     
     </div>
   )
