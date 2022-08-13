@@ -37,6 +37,7 @@ function CounterSection () {
             <h1>Preview our new app!</h1>
             <div className='counter-field'>
                 <h3>Workout Counter</h3>
+                <p>Click on the day and start adding your workouts with the button below</p>
                 {
                 days.map((day) => {
                     return (
