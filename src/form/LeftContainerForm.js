@@ -18,22 +18,33 @@ function LeftContainerForm(props) {
         <div className='left-container-form'>
             <div className='left-inner-form-container'>
                 <h1>{FORM_TEXT[props.formPage]}</h1>
+                
                 {
-
-                    (props.formPage == 0 || props.formPage == 2) && 
-                    <TextInputForm emailData={emailData} setEmailData={setEmailData} 
-                    extraDetails={extraDetails} setExtraDetails={setExtraDetails} formPage={props.formPage}/>
+                    props.formPage === 0 && <TextInputForm setData={setEmailData} 
+                    placeholder={"What's your email?"} formPage={props.formPage}/>  
                 }
                 {
-                    props.formPage == 1 && <ButtonGroupForm buttonData={buttonData} setButtonData={setButtonData}/>  
+                    props.formPage === 1 && <ButtonGroupForm buttonData={buttonData} setButtonData={setButtonData}/>  
+                }
+                {
+                    props.formPage === 2 && 
+                    <TextInputForm setData={setExtraDetails} 
+                    formPage={props.formPage}/>
+                }
+                {
+                    props.formPage === 3 ? 
+                    <div className="summarized-data"> 
+                        <h3>We'll keep in touch.</h3>
+                        <p> Email: {emailData} </p>
+                        <p> Budget: {buttonData}  </p>
+                        <p> Target Audience: {extraDetails}  </p> 
+                    </div> : ''
                 }
                 {           
                     props.formPage !== 3 && (
                     <button onClick={() => props.setFormState(props.formPage+1)}>Next</button>
                 )}
-                {
-                    props.formPage === 3 ? emailData + buttonData : ''
-                }
+                
 
             </div>
         </div>

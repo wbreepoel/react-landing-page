@@ -33,7 +33,7 @@ nav > p {
 .hero-section h1 {
   font-size: 25px;
   margin: auto;
-  transform: translateY(150%);
+  transform: translateY(50%);
 }
 
 .service-section {
@@ -150,7 +150,7 @@ input[type='text']::placeholder {
 @media only screen and (min-width: 992px) {
 
   .hero-section h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   .service-items{

@@ -31,6 +31,9 @@
     width: 100%;
     padding: 15px 0px;
     margin-bottom: 30px;
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .text-input-form input[type='text']::placeholder {
@@ -54,6 +57,10 @@
     color:white;
     margin: 20px 12px 20px 0;
     width: 80px;
+  }
+
+  .summarized-data {
+      color:white;
   }
 
 @media only screen and (min-width: 992px) {
@@ -96,7 +103,18 @@
 
       .left-inner-form-container {
         width: 80%;
-    
+    }
+
+    .text-input-form input[type='text'] {
+        font-size: 22px;
+    }
+
+    .summarized-data {
+        font-size: 20px;
+    }
+
+    .summarized-data h3 {
+        font-size: 25px;
     }
 
 }

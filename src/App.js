@@ -17,7 +17,7 @@ function App() {
     <div className='App'>
       <HeroSection/>
       <ServiceSection/>
-      <FooterSection />
+      {/* <FooterSection /> */}
       <div className='form'>
         <LeftContainerForm formPage={formState} setFormState={setFormState}/>
         <RightImageForm formPage={formState}/>
