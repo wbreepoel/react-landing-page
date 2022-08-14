@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    background-color: #f1f1f1;
+}
+
+table td,th {
+    padding: 10px 20px;
+}
+
+table th {
+    border-bottom: 1px solid white;
+}
+
+.crypto-dashboard table{
+    margin:auto;
+
+}
+
+.crypto-dashboard {
+    margin-bottom: 50px;
+}
